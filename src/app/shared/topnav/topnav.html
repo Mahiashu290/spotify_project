@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <a class="navbar-brand fw-bold" href="#">MyMusic</a>
+
+  <!-- Hamburger -->
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarContent"
+    aria-controls="navbarContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarContent">
+    <!-- Search bar -->
+    <form class="d-flex mx-auto my-2 my-lg-0 search-form" (submit)="onSearch()">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search songs, artists..."
+        aria-label="Search"
+        [(ngModel)]="searchQuery"
+        name="searchQuery"
+      />
+      <button class="btn btn-outline-light" type="submit">
+        <i class="bi bi-search"></i>
+      </button>
+    </form>
+
+    <!-- Icons -->
+    <ul class="navbar-nav ms-auto align-items-center">
+      <li class="nav-item mx-2">
+        <a class="nav-link" href="#"><i class="bi bi-heart"></i></a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link" href="#"><i class="bi bi-bell"></i></a>
+      </li>
+    
+      <li class="nav-item mx-2">
+        <div class="nav-link cursor-pointer"><span class="bg-success user" [title]="user()">{{user().slice(0,1)}}</span></div>
+      </li>
+    
+    </ul>
+  </div>
+</nav>

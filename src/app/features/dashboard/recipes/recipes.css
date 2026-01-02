@@ -1,0 +1,54 @@
+.viewport {
+  height: 1000px;
+  width: 100%;
+  border: 1px solid #ccc;
+  overflow: auto;
+}
+button.active {
+  background-color: #1db954 !important; 
+  color: #fff !important;
+  border-color: #1db954 !important;
+}
+
+.cross::before{
+    content: '+';
+
+}
+
+.cross:focus::before{
+    content: 'X';
+}
+
+.mark{
+  border-radius: 50%;
+  padding: 3px 4px;
+}
+
+.position{
+  position: sticky;
+  bottom: 0px;
+}
+
+.tabs{
+  border: 1px solid;
+  box-shadow: rgb(186, 153, 119) red;
+  
+}
+
+.tabs button{
+  border-radius: 20px;
+  
+}
+
+
+.scroll-content{
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: static;
+  top: 10px;
+  height: 465px;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #222;
+  width: auto;
+
+}

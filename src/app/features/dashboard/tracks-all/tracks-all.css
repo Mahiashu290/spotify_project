@@ -1,0 +1,79 @@
+/* Section Title */
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Wrapper so arrows align vertically */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Arrows centered vertically */
+.scroll-btn {
+  position: absolute;
+  z-index: 10;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.scroll-btn.left {
+  left: -10px;
+}
+
+.scroll-btn.right {
+  right: -10px;
+}
+
+/* Hide scrollbar */
+.carousel-x {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 8px 0;
+}
+
+.carousel-x::-webkit-scrollbar {
+  display: none;   /* Hides scrollbar */
+}
+
+.carousel-x {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;    
+}
+
+
+.artist-card {
+  flex: 0 0 150px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.artist-card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.artist-title {
+  /* font-size: 14px;
+  font-weight: 600; */
+  /* margin-top: 6px; */
+  /* color: white; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

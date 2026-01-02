@@ -1,0 +1,48 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.search-form {
+  width: 50%;
+}
+
+.search-form input {
+  border-radius: 25px;
+  padding-left: 15px;
+}
+
+.search-form .btn {
+  border-radius: 50%;
+}
+
+.nav-link i {
+  font-size: 1.3rem;
+  color: #ffffff;
+  transition: color 0.2s;
+}
+
+.nav-link i:hover {
+  color: #0dcaf0;
+}
+
+/* Make search bar full width on small screens */
+@media (max-width: 992px) {
+  .search-form {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+
+
+.user{
+    border-radius: 50%;
+    padding:4px 5px
+    
+}

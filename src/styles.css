@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+:root{
+  --artist-title-color:#ffffff;
+  --artist-title-hover: #1db954;
+  --artist-title-size: 15px;
+  --artist-title-weight: 700;
+  --artist-title-spacing: 0.4px;
+}
+
+
+
+.hovering:hover{
+  background-color: #1F1F1F;
+  cursor: pointer;
+}
+
+
+
+
+
+
+label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.artist-title {
+  font-size: var(--artist-title-size);
+  font-weight: var(--artist-title-weight);
+  color: white;
+  margin-top: 5px;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+  letter-spacing: var(--artist-title-spacing);
+  transition: color .2s ease;
+}
+
+.artist-title:hover {
+  color: var(--artist-title-hover); 
+}

@@ -1,0 +1,23 @@
+@if (type()==='artist') {
+    <app-coursol
+ title="Top Artists For You" 
+[items]="data()"
+[itemType]="'artist'"
+[layout]="'grid'"
+>
+
+</app-coursol>
+}
+
+
+
+@if(type()==='track'){
+ <app-coursol
+ title="Top tracks For You" 
+[items]="data()"
+[itemType]="'track'"
+[layout]="'grid'"
+>
+
+</app-coursol>
+}

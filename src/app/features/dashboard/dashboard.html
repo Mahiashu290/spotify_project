@@ -1,0 +1,23 @@
+<div class="dashboard-container">
+
+  <!-- TOP NAV -->
+  <app-topnav></app-topnav>
+
+  <div class="main-content">
+    
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+      <app-recipes></app-recipes>
+    </div>
+
+    <!-- RIGHT CONTENT (SCROLLABLE) -->
+    <div class="content-area scroll-content">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+
+  <!-- FIXED PLAYER -->
+<div class="bg-light">  <app-player class="music-player"></app-player></div>
+
+</div>

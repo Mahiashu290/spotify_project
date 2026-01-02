@@ -1,0 +1,74 @@
+<section class="carousel-section">
+
+  <!-- Title + Show All -->
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <button class="section-title btn btn-sm">{{ title }}</button>
+
+    @if (layout === 'carousel') {
+      <button class="btn btn-sm text-light" (click)="navigateToShowAll()">
+        Show All
+      </button>
+    }
+  </div>
+
+  <div
+    [class.carousel-wrapper]="layout === 'carousel'"
+    [class.grid-wrapper]="layout === 'grid'">
+
+    <!-- Left Arrow (only for carousel) -->
+    @if (layout === 'carousel') {
+      <button class="scroll-btn left" (click)="scrollLeft()">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+    }
+
+    <!-- Cards container -->
+    <div
+      #scrollArea
+      [class.carousel-x]="layout === 'carousel'"
+      [class.grid]="layout === 'grid'">
+
+      @for (item of items; track item.id) {
+
+        <div class="artist-card p-2 hovering">
+
+          <!-- IMAGE -->
+          <div class="image-wrapper">
+
+            <img
+              [src]="
+                itemType === 'track' ? item?.album?.images?.[0]?.url :
+                itemType === 'artist' ? item?.images?.[0]?.url :
+                itemType === 'album' ? item?.images?.[0]?.url :
+                itemType === 'playlist' ? item?.images?.[0]?.url :
+                'assets/no-image.png'
+              "
+              alt="{{ item.name }}"
+            />
+
+            <div class="play-overlay">
+              <i class="bi bi-play-fill play-icon"></i>
+            </div>
+
+          </div>
+
+          <!-- Title -->
+          <div class="artist-title" [title]="item.name">
+            {{ item.name }}
+          </div>
+
+        </div>
+
+      }
+    </div>
+
+    <!-- Right Arrow (only for carousel) -->
+    @if (layout === 'carousel') {
+      <button class="scroll-btn right" (click)="scrollRight()">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    }
+
+  </div>
+
+</section>
